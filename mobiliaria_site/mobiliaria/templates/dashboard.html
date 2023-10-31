@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Imóveis</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="mb-4">Dashboard Imóveis</h1>
+        <a href="#" class="btn btn-outline-primary">Sair</a>
+    </div>
+
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active bg-primary">Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action">Ver Imóveis</a>
+                <a href="#" class="list-group-item list-group-item-action">Adicionar Imóveis</a>
+                <a href="#" class="list-group-item list-group-item-action">Configurações</a>
+            </div>
+        </div>
+
+      
+
+<!-- Main Content -->
+<div class="col-md-9 bg-white p-4 rounded">
+    <h2 class="mb-3">Adicionar Imóvel</h2>
+    <form method="post" enctype="multipart/form-data" class="border p-4 rounded">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            {{ form.address.label_tag }} {{ form.address }}
+        </div>
+        <div class="mb-3">
+            {{ form.status.label_tag }} {{ form.status }}
+        </div>
+        <div class="mb-3">
+            {{ form.area.label_tag }} {{ form.area }}
+        </div>
+        <div class="mb-3">
+            {{ form.bedrooms.label_tag }} {{ form.bedrooms }}
+        </div>
+        <div class="mb-3">
+            {{ form.bathrooms.label_tag }} {{ form.bathrooms }}
+        </div>
+        <div class="mb-3">
+            {{ form.floor.label_tag }} {{ form.floor }}
+        </div>
+        <div class="mb-3">
+            {{ form.parking.label_tag }} {{ form.parking }}
+        </div>
+        <div class="mb-3">
+            {{ form.value.label_tag }} {{ form.value }}
+        </div>
+        <div class="mb-3">
+            {{ form.type.label_tag }} {{ form.type }}
+        </div>
+        <div class="mb-3">
+            {{ form.path.label_tag }} {{ form.path }}
+        </div>
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+<!-- Bootstrap 5 JS, Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

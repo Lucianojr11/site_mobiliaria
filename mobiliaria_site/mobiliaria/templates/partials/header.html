@@ -21,6 +21,16 @@
                     </a>
                     <!-- ***** Menu End ***** -->
                 </nav>
+
+                {% if messages %}
+                    <div class="messages mt-2 mb-2">
+                        {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
