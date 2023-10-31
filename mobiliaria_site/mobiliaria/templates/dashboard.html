@@ -30,53 +30,52 @@
             </div>
         </div>
 
-      
+        <!-- Main Content -->
+        <div class="col-md-9 bg-white p-4 rounded">
+            <h2 class="mb-3">Adicionar Imóvel</h2>
+            <form method="post" enctype="multipart/form-data" class="border p-4 rounded">
+                {% csrf_token %}
+                
+             
+                <div class="mb-3">
+                    {{ form.address.label_tag }} {{ form.address }}
+                </div>
 
-<!-- Main Content -->
-<div class="col-md-9 bg-white p-4 rounded">
-    <h2 class="mb-3">Adicionar Imóvel</h2>
-    <form method="post" enctype="multipart/form-data" class="border p-4 rounded">
-        {% csrf_token %}
-        
-        <div class="mb-3">
-            {{ form.address.label_tag }} {{ form.address }}
+                <div class="mb-3">
+                    {{ form.status.label_tag }} {{ form.status }}
+                </div>
+                <div class="mb-3">
+                    {{ form.area.label_tag }} {{ form.area }}
+                </div>
+                <div class="mb-3">
+                    {{ form.bedrooms.label_tag }} {{ form.bedrooms }}
+                </div>
+                <div class="mb-3">
+                    {{ form.bathrooms.label_tag }} {{ form.bathrooms }}
+                </div>
+                <div class="mb-3">
+                    {{ form.floor.label_tag }} {{ form.floor }}
+                </div>
+                <div class="mb-3">
+                    {{ form.parking.label_tag }} {{ form.parking }}
+                </div>
+                <div class="mb-3">
+                    {{ form.value.label_tag }} {{ form.value }}
+                </div>
+                <div class="mb-3">
+                    {{ form.type.label_tag }} {{ form.type }}
+                </div>
+                <div class="mb-3">
+                    {{ form.path.label_tag }} {{ form.path }}
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
         </div>
-        <div class="mb-3">
-            {{ form.status.label_tag }} {{ form.status }}
-        </div>
-        <div class="mb-3">
-            {{ form.area.label_tag }} {{ form.area }}
-        </div>
-        <div class="mb-3">
-            {{ form.bedrooms.label_tag }} {{ form.bedrooms }}
-        </div>
-        <div class="mb-3">
-            {{ form.bathrooms.label_tag }} {{ form.bathrooms }}
-        </div>
-        <div class="mb-3">
-            {{ form.floor.label_tag }} {{ form.floor }}
-        </div>
-        <div class="mb-3">
-            {{ form.parking.label_tag }} {{ form.parking }}
-        </div>
-        <div class="mb-3">
-            {{ form.value.label_tag }} {{ form.value }}
-        </div>
-        <div class="mb-3">
-            {{ form.type.label_tag }} {{ form.type }}
-        </div>
-        <div class="mb-3">
-            {{ form.path.label_tag }} {{ form.path }}
-        </div>
-
-        <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Salvar</button>
-        </div>
-    </form>
+    </div>
 </div>
-
-
-
 
 <!-- Bootstrap 5 JS, Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
