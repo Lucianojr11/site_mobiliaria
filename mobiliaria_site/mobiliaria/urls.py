@@ -11,6 +11,7 @@ urlpatterns = [
     path("contact.html", views.contact, name="contact"),
     path('index', views.mensagem, name='index'),
     path('add_imovel/', views.add_imovel, name='add_imovel'),
+
  
 
 ]

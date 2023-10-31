@@ -22,3 +22,5 @@ class Message(models.Model):
    email = models.EmailField()
    subject = models.TextField()
    message = models.TextField()
+
+

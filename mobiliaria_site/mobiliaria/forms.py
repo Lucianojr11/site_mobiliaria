@@ -1,6 +1,9 @@
 from django import forms
 from .models import Imoveis
 
+
+
+
 class Mensagem(forms.Form):
     name=forms.CharField(
         label='Full name', 
@@ -72,3 +75,5 @@ class ImovelForm(forms.ModelForm):
             'type': forms.Select(attrs={'class': 'form-control'}), 
             'path': forms.FileInput(attrs={'class': 'form-control-file'}),
         }
+
+

@@ -6,6 +6,7 @@ from .models import Message
 from django.contrib import messages
 from .forms import ImovelForm
 
+
 # Create your views here.
 
 def index (request):
@@ -64,3 +65,4 @@ def add_imovel(request):
         form = ImovelForm()
 
     return render(request, 'dashboard.html', {'form': form})
+
